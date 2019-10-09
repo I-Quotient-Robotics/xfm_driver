@@ -46,7 +46,7 @@ class XFMRosDriver:
     while not rospy.is_shutdown():
       xfm_now_status = gpio.read(XFM_WAKEUP_PIN)
       if xfm_last_status == 0 and xfm_now_status == 1:
-        #print "RISING!!"
+        print "RISING!!"
         self.pushMsg()
       xfm_last_status = xfm_now_status
       r.sleep()
